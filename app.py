@@ -10,7 +10,8 @@ dotenv_loaded = load_dotenv(dotenv_path=Path ('.env'))
 print("dotenv loaded:", dotenv_loaded)
 
 
-api_key = "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"
+api_key = os.getenv("OPENROUTER_API_KEY")
+
 
 print("API Key loaded:", bool(api_key))
 print("API Key value:", api_key if api_key else "None")
